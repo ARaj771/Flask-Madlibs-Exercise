@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+   {% block title %} Initail Page {% endblock %}
+
+   {% block content %} 
+    <h1>Madlibs</h1>
+
+    <form action = '/story'>
+        {% for prompt in prompts %}
+
+        <label for = {{prompt}} >{{prompt}}:</label>
+        <input type = 'text' id = {{prompt}}  name = {{prompt}}>
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+    
+    {% endblock %}
